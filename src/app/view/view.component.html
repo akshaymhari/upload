@@ -1,0 +1,81 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+     <img src="../assets/shop.png" alt="Shop" width="30" height="30"> 
+     <h2>R CART</h2>
+    <mat-list>
+        <br>
+        <mat-list-item>Dash Board</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Order</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Product</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Employee</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Distributor</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Retailers</mat-list-item>
+         <mat-divider></mat-divider>
+        <mat-list-item>Notification</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Reports</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Attendance</mat-list-item>
+    </mat-list>
+
+  
+  
+  </mat-drawer>
+   
+
+  <mat-drawer-content >
+  <mat-toolbar>
+    <span class="fill-space"></span>
+    <img src="../assets/notify.png" alt="Shop" width="30" height="30"> 
+    <img src="../assets/setting.png" alt="Shop" width="30" height="30"> 
+
+  </mat-toolbar>
+  <mat-toolbar>Order List
+     
+    <span class="fill-space"></span>
+    
+    <img src="../assets/setting.png" alt="Search" width="30" height="30"> 
+
+  </mat-toolbar>
+  
+  <div style="overflow-x:auto; height: 400px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <td style="width: 2%"><b>Sl.No</b></td>
+                <td style="width: 5%"><b>OrderId</b></td>
+                <td style="width: 5%"><b>Name</b></td>
+                <td style="width: 5%"><b>Order Time</b></td>
+                <td style="width: 5%"><b>Distributer</b></td>
+                <td style="width: 5%"><b>Status</b></td>
+                <td style="width: 5%"><b>Amount</b></td>
+                <td style="width: 5%"><b></b></td>
+           
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of Fakedata ; let i=index">
+                <td style="width: 2%">{{i+1}}</td>
+                <td style="width: 5%">{{data.orderid}}</td>
+                <td style="width: 5%">{{data.name}}</td>
+                <td style="width: 5%">{{data.ordertime | date:'dd / MM / yyyy'}}</td>
+                <td style="width: 5%">{{data.distributer}}</td>
+                <td style="width: 5%">{{data.status}}</td>
+                <td style="width: 5%">{{data.amt}}</td>
+                
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+  
+    
+  </mat-drawer-content>
+  
+</mat-drawer-container>

@@ -1,0 +1,9 @@
+.example-container {
+    width: 1515px;
+    height: 800px;
+    /* margin: 10px; */
+    border:  solid #555;
+  }
+  .fill-space{
+      flex:1 1 auto;
+  }
